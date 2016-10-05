@@ -30,6 +30,11 @@ bool isRepeatString(string s)
 // abcabcbb-->abc
 int lengthOfLongestSubstring(string s)
 {
+    if (s.length() == 0)
+    {
+        return 0;
+    }
+
     long length = s.length();
     for (int i = 0; i < s.length(); i++)
     {
@@ -54,13 +59,11 @@ int lengthOfLongestSubstring(string s)
     return 1;
 }
 
-
-
 int main(int argc, const char * argv[])
 {
-    int result = lengthOfLongestSubstring("");
+    int result = lengthOfLongestSubstring(
+                                        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~");
     cout << result;
-
 
     return 0;
 }
